@@ -17,7 +17,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json( {extended: true}));
 app.use(bodyParser.urlencoded({ extended: true }));
-//using router as app component with use function
+//using Router as app component with use function
 app.use('/', Router);
 
 const PORT = 8000;

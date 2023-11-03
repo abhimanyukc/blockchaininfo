@@ -13,7 +13,7 @@ import upload from '../utils/upload.js'
 
 //intializing router with Router function
 const router = express.Router();
-
+//facebook.com is api url
 //to make api here we make all routes
 //route is endpoint of api like /signup
 //signupUser is function to call api

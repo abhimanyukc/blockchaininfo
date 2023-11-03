@@ -1,6 +1,6 @@
 //to connect our app to cloud.mongodb we use this file
 
-//importing mongoose library
+//importing mongoose library for db conn
 import mongoose from "mongoose"
 
 
@@ -21,4 +21,6 @@ import mongoose from "mongoose"
    }
 }
 
+
+//default export
 export default Connection;
