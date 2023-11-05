@@ -13,11 +13,12 @@ conn.once('open', () => {
 })
 
 export const uploadImage = (request,response) => {
-
+//for file not exist
     if (!request.file) {
         return response.status(404).json({msg : 'File not found'});
     }
 
+    //responsing image detail
 const imageUrl = `${url}/file/${request.file.filename}`;
 
 return response.status(200).json(imageUrl);

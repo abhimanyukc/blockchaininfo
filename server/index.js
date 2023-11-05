@@ -3,7 +3,9 @@
 //code from javascript es6(ECMAScript)
 import express from 'express';
 import dotenv from 'dotenv';
+//installing cors for security and to run client ,server in different port.
 import cors from 'cors';
+//to handle post api  req we use body-parser ,for req with body
 import bodyParser from 'body-parser';
 //importing connection
 import Connection  from './database/db.js';
@@ -14,8 +16,11 @@ dotenv.config();
 //initializing express as a function
 const app = express();
 
+//using cors as a function
 app.use(cors());
+//extended true to parse json format
 app.use(bodyParser.json( {extended: true}));
+//to parse url (like url enter with space)
 app.use(bodyParser.urlencoded({ extended: true }));
 //using Router as app component with use function
 app.use('/', Router);

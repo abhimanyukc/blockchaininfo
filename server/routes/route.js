@@ -19,6 +19,7 @@ const router = express.Router();
 //signupUser is function to call api
 router.post('/signup',signupUser);
 router.post('/login', loginUser);
+//2nd argument is middleware
 router.post('/file/upload',upload.single('file'), uploadImage);
 router.get('/file/:filename', getImage);
 
